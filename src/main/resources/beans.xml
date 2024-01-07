@@ -1,0 +1,17 @@
+<!-- applicationContext.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define a simple bean -->
+    <bean id ="callertune" class = "com.Service.Services.CallerTuneService"></bean>
+    <bean id ="dataservice" class ="com.Service.Services.DataService"></bean>
+    <bean id ="Calling" class = "com.Service.Services.Calling"></bean>
+    <bean id = "Airtel" class="com.Service.Services.AirtelProvider">
+        <property name="ServeService" ref="Calling"/>
+
+    </bean>
+
+
+</beans>
